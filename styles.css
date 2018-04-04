@@ -1,0 +1,42 @@
+
+
+.user-choice {
+    width: 70%;
+    height: 5%;
+    border: 1px solid #c3c3c3;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-items: center;
+    justify-content: center;
+    /* align-self: center; */
+}
+
+.user-choice-button {
+	display: flex;
+    justify-content: center;
+    width: 33%;
+    height: 80%;
+}
+
+#choice-shuffler {
+    width: auto;
+    height: 75%;
+    border: 1px solid #c3c3c3;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    /* align-content: center; */
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+	height : 100%;
+	background-color: #EAFAF1;
+}
+
