@@ -1,35 +1,43 @@
-function shuffler(){
+document.onload = function() {
+	function shuffler(){
 
-	let items = ['Rock', 'Paper', 'Scissor'];
+	let items = ['stone.png', 'paper.png', 'scissor.png'];
 	let random = Math.floor((Math.random() * 3));
 
-	document.getElementById('choice-shuffler').innerHTML = items[random];
 
-	console.log(document.getElementById('choice-shuffler').innerText);
+	let img = document.getElementById('computer-choice');
+	img.setAttribute("src",items[random]); 
+	//console.log(document.getElementById('choice-shuffler').innerText);
 }
 
-function selector(){
-	return function(){
-		setInterval(shuffler, 100);
-	}
-}
-document.onload = function(){
-	var clicked = false;
-	let choices = document.getElementsByClass('user-choice-button');
-	var repeater = selector;
 
-	for(let choice of choices){
-		choice.addEventListener('click', function(event){
-			clicked = event.target.innerText;
+function starthere(){
+	let choices = document.getElementsByClassName('user-choice-button');
+
+	let athlete;
+
+	document.getElementById('choice-shuffler').addEventListener('dblclick', function(event){			
+		console.log("started");
+		athlete = setInterval(shuffler, 50)
+	});
+
+	for(let el of choices){
+		el.addEventListener('click', function(event){
+
+			clearInterval(athlete);
+			if((event.target.innerText+".png") == document.getElementById('computer-choice').src){
+				alert("you win");
+			}
+
+			else{
+				alert("try again loser");
+			}
+
 		});
 	}
-
-	if(!clicked){
-		repeater();
-	}
-
-	else{
-		clearInterval(repeater);
-	}
 }
+
+starthere();
+
+}();
 

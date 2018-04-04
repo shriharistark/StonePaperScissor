@@ -33,6 +33,10 @@
     /* align-content: center; */
     justify-content: center;
     align-items: center;
+    font-size: 72px;
+    color: #ECF0F1;
+    background-color: #B03A2E;
+    font-family: "Lucida Sans Unicode", "Lucida Grande" ,sans-serif;
 }
 
 #container {
