@@ -1,16 +1,23 @@
 
 
-.user-choice {
-    width: 100%;
+#computer-choice {
+    cursor : pointer;
+}
+
+#user-choice {
+    width: 95%;
     height: 10%;
-    border: 1px solid #c3c3c3;
+    border: 0px solid #c3c3c3;
     display: -webkit-flex;
-    display: flex;
+    display: none;
+    position: absolute;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-align-content: center;
     align-items: center;
     justify-content: center;
+    top: 70;
+    left: 0;
     /* align-self: center; */
 }
 
@@ -24,6 +31,11 @@
     color: ghostwhite;
     font-size: 14px
 }
+
+/*
+.user-choice-button : hover {
+    color: grey;
+}*/
 
 #choice-shuffler {
     width: auto;
